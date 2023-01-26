@@ -3,42 +3,46 @@
 This document is written to provide aid in understanding the project.
 
 Contents of the document - 
-Understanding the problem statement 
-About the dataset
-Machine learning 
-Types of machine learning models with examples 
-Machine learning algorithm used for the model - XGBoost Regression model 
-NumPy library 
-Pandas library 
-Scikit-learn library 
-Matplot library 
-Exploratory data analysis 
-Fixing missing values in the dataset 
-Data visualisation - Seaborn 
-Correlation and heatmap 
-Categorical encoding 
-Train-test split 
-Model evaluation - Mean Absolute Error 
+1. Understanding the problem statement 
+2. About the dataset
+3. Machine learning 
+4. Types of machine learning models with examples 
+5. Machine learning algorithm used for the model - XGBoost Regression model 
+6. NumPy library 
+7. Pandas library 
+8. Scikit-learn library 
+9. Matplot library 
+10. Exploratory data analysis 
+11. Fixing missing values in the dataset 
+12. Data visualisation - Seaborn 
+13. Correlation and heatmap 
+14. Categorical encoding 
+15. Train-test split 
+16. Model evaluation - Mean Absolute Error 
 
 What is the problem statement for the machine learning algorithm ?
+
 What are the metabolic activities in a human body when a person engages in any sort of physical activity. This will help us understand the problem better and create a good hypothesis and work flow statement. Let's consider a person is exercising. For example, they are on a treadmill, or running or yoga or any other form of exercise. They have consumed a good meal. So energy derived from this meal (carbohydrates broken down into simple sugar such as glucose which is further broken down in the presence of oxygen into energy for the body) will be used to perform the exercise properly. The muscles require a great amount of energy. This is supplied through the blood. To meet the high oxygen demand there is greater supply of oxygen. In turn, we observe that there is an increase in the heartbeat. Heartbeat may be more than 100 bpm. There is also an increase in body temperature. Because of this increase temperature, the body releases sweat (as a counteraction to deal with the high body temperature). This helps in burning calories. 
 
 Therefore, we will use body temperature and sweat as a parameter to calculate the amount of calories burnt.
 
 About the dataset - 
+
 The dataset contains the following columns - 
-User_ID - identification number of the user 
-Calories - amount of calories burnt after the exercise 
-Gender 
-Age
-Height 
-Weight 
-Duration - total duration of exercise 
-Heart_Rate - speed at which the heart beats. average is 72 beats per minute
-Body_Temp - body temperature after exercise
+1. User_ID - identification number of the user 
+2. Calories - amount of calories burnt after the exercise 
+3. Gender 
+4. Age
+5. Height 
+6. Weight 
+7. Duration - total duration of exercise 
+8. Heart_Rate - speed at which the heart beats. average is 72 beats per minute
+9. Body_Temp - body temperature after exercise
+
 It consists of 15000 rows (15000 data points) and 9 columns (9 features).
 
 Machine learning - 
+
 Machine learning enables the processing of sonar signals and target detection. Machine Learning is a subset of Artificial Intelligence. This involves the development of computer systems that are able to learn by using algorithms and statistical measures to study data and draw results from it. Machine learning is basically an integration of computer systems, statistical mathematics and data.
 
 Machine Learning is further divided into three classes - Supervised learning, Unsupervised learning and Reinforcement Learning. 
@@ -56,32 +60,38 @@ Extreme Gradient Boost
 XGBoost is a powerful approach for building supervised regression models. It is an efficient and effective implementation of the gradient boosting algorithm. The objective function contains loss function and a regularization term. It tells about the difference between actual values and predicted values, i.e how far the model results are from the real values.
 
 Libraries used in the project - 
+
 NumPy  
+
 It is a python library used for working with arrays. It has functions for working in the domain of linear algebra, fourier transform, and matrices. It is the fundamental package for scientific computing with python. NumPy stands for numerical python. 
 
 NumPy is preferred because it is faster than traditional python lists. It has supporting functions that make working with ndarray very easy. Arrays are frequently used where speed and resources are very important. NumPy arrays are faster because it is stored at one continuous place in memory unlike lists, so processes can access and manipulate them very efficiently. This is locality of reference in computer science. 
 
 Pandas - 
+
 Pandas is made for working with relational or labelled data both easily and intuitively. It provides various data structures and operations for manipulating numerical data and time series. 
 
 It has a lot of advantages like - 
-Fast and efficient for manipulating and analyzing data
-Data from different file objects can be loaded 
-Easy handling of missing data in data preprocessing 
-Size mutability 
-Easy dataset merging and joining 
-Flexible reshaping and pivoting of datasets 
-Gives time-series functionality 
+1. Fast and efficient for manipulating and analyzing data
+2. Data from different file objects can be loaded 
+3. Easy handling of missing data in data preprocessing 
+4. Size mutability 
+5. Easy dataset merging and joining
+6. Flexible reshaping and pivoting of datasets 
+7. Gives time-series functionality 
 
 Pandas is built on top of NumPy library. That means that a lot of structures of NumPy are used or replicated in Pandas. The data produced by pandas are often used as input for plotting functions of Matplotlib, statistical analysis in SciPy, and machine learning algorithms in Scikit-learn. 
 
 Scikit-Learn - 
+
 It provides efficient tools for machine learning and statistical modeling including classification, regression, clustering and dimensionality reduction. It has numerous machine learning, pre-processing, cross validation, and visualization algorithms. 
 
 Maplotlib - 
+
 Matplotlib is a visualization library in python for 2D plots of arrays. It allows visual access to huge amounts of data in easily digestible visuals and plots like line, bar, scatter, histogram etc. 
 
 Exploratory data analysis - 
+
 Exploratory data analysis is the process of performing initial investigation on the data to discover patterns or spot anomalies. It is done to test the hypothesis and to check assumptions with the help of summary statistics and graphical representations. 
 
 ‘describe()’ method returns description of data in DataFrame. It tells us the following information for each column - 
@@ -98,37 +108,39 @@ The info() method prints the information about dataframe.
 It contains the number of columns, column labels, column data types, memory usage, range index, and number of cells in each column. 
 
 Parameters - 
-verbose - It is used to print the full summary of the dataset.
-buf - It is a writable buffer, default to sys.stdout.
-max_cols - It specifies whether a half summary or full summary is to be printed.
-memory_usage - It specifies whether total memory usage of the DatFrame elements (including index) should be displayed.
-null_counts - It is used to show the non-null counts.
+1. verbose - It is used to print the full summary of the dataset.
+2. buf - It is a writable buffer, default to sys.stdout.
+3. max_cols - It specifies whether a half summary or full summary is to be printed.
+4. memory_usage - It specifies whether total memory usage of the DatFrame elements (including index) should be displayed.
+5. null_counts - It is used to show the non-null counts.
 
 Missing values - 
+
 Missing values are common when working with real-world datasets. Missing data could result from a human factor, a problem in electrical sensors, missing files, improper management or other factors. Missing values can result in loss of significant information. Missing value can bias the results of model and reduce the accuracy of the model. There are various methods of handling missing data but unfortunately they still introduce some bias such as favoring one class over the other but these methods are useful. 
 
 In Pandas, missing values are represented by NaN. It stands for Not a Number. 
 
 Reasons for missing values - 
-Past data may be corrupted due to improper maintenance
-Observations are not recorded for certain fields due to faulty measuring equipments. There might by a failure in recording the values due to human error. 
-The user has not provided the values intentionally. 
+1. Past data may be corrupted due to improper maintenance
+2. Observations are not recorded for certain fields due to faulty measuring equipments. There might by a failure in recording the values due to human error. 
+3. The user has not provided the values intentionally. 
 
 Why we need to handle missing values - 
-Many machine learning algorithms fail if the dataset contains missing values. 
-Missing values may result in a biased machine learning model which will lead to incorrect results if the missing values are not handled properly. 
-Missing data can lead to lack of precision. 
+1. Many machine learning algorithms fail if the dataset contains missing values.
+2. Missing values may result in a biased machine learning model which will lead to incorrect results if the missing values are not handled properly.
+3. Missing data can lead to lack of precision. 
 
 Types of missing data - 
+
 Understanding the different types of missing data will provide insights into how to approach the missing values in the dataset. 
-Missing Completely at Random (MCAR) 
+1. Missing Completely at Random (MCAR) 
 There is no relationship between the missing data and any other values observed or unobserved within the given dataset. Missing values are completely independent of other data. There is no pattern. The probability of data being missing is the same for all the observations. 
 The data may be missing due to human error, some system or equipment failure, loss of sample, or some unsatisfactory technicalities while recording the values.
 It should not be assumed as it’s a rare case. The advantage of data with such missing values is that the statistical analysis remains unbiased.   
-Missing at Random (MAR)
+2. Missing at Random (MAR)
 The reason for missing values can be explained by variables on which complete information is provided. There is relationship between the missing data and other values/data. In this case, most of the time, data is not missing for all the observations. It is missing only within sub-samples of the data and there is pattern in missing values. 
 In this, the statistical analysis might result in bias. 
-Not MIssing at Random (NMAR)
+3. Not MIssing at Random (NMAR)
 Missing values depend on unobserved data. If there is some pattern in missing data and other observed data can not explain it. If the missing data does not fall under the MCAR or MAR then it can be categorized as MNAR. 
 It can happen due to the reluctance of people in providing the required information. 
 In this case too, statistical analysis might result in bias. 
@@ -138,104 +150,118 @@ How to handle missing values -
 isnull().sum() - shows the total number of missing values in each columns 
 
 We need to analyze each column very carefully to understand the reason behind missing values. There are two ways of handling values - 
-Deleting missing values - this is a simple method. If the missing value belongs to MAR and MCAR then it can be deleted. But if the missing value belongs to MNAR then it should not be deleted. 
+1. Deleting missing values - this is a simple method. If the missing value belongs to MAR and MCAR then it can be deleted. But if the missing value belongs to MNAR then it should not be deleted. 
 The disadvantage of this method is that we might end up deleting useful data. 
 You can drop an entire column or an entire row. 
-Imputing missing values - there are various methods of imputing missing values
-Replacing with arbitrary value 
-Replacing with mean - most common method. But in case of outliers, mean will not be appropriate
-Replacing with mode - mode is most frequently occuring value. It is used in case of categorical features. 
-Replacing with median - median is middlemost value. It is better to use median in case of outliers. 
-Replacing with previous value - it is also called a forward fill. Mostly used in time series data. 
-Replacing with next value - also called backward fill. 
-Interpolation 
+2. Imputing missing values - there are various methods of imputing missing values
+3. Replacing with arbitrary value 
+4. Replacing with mean - most common method. But in case of outliers, mean will not be appropriate
+5. Replacing with mode - mode is most frequently occuring value. It is used in case of categorical features. 
+6. Replacing with median - median is middlemost value. It is better to use median in case of outliers. 
+7. Replacing with previous value - it is also called a forward fill. Mostly used in time series data. 
+8. Replacing with next value - also called backward fill. 
+9. Interpolation 
 
 Data visualisation - 
+
 Datasets often come in csv files, spreadsheets, table form etc. Data visualisation provides a good and organized pictorial representation of data which makes it easier to observe, understand and analyze. 
+
 Python provides various libraries that come with different features for visualizing data. All these libraries have different features and can support various types of graphs. 
-Matplotlib - for 2D array plots. It includes wide range of plots, such as scatter, line, bar, histogram and others that can assist in delving deeper into trends. 
-Seaborn - it is used for creating statistical representations based on datasets. It is built on top of matplotlib. It is built on top of pandas’ data structures. The library conducts the necessary modelling and aggregation internally to create insightful visuals.
-Bokeh - it is a modern web browser based interactive visualization library. It can create engaging plots and dashboards with huge streaming data. The library contains many intuitive graphs. It has close relationship with PyData tools. The library is ideal for creating customized visuals.  
-Plotly - python visualization library that is interactive, accessible, high-level and browser-based. Scientific graphs, 3D charts, statistical plots, and financial charts. Interaction and editing options are available. 
+1. Matplotlib - for 2D array plots. It includes wide range of plots, such as scatter, line, bar, histogram and others that can assist in delving deeper into trends. 
+2. Seaborn - it is used for creating statistical representations based on datasets. It is built on top of matplotlib. It is built on top of pandas’ data structures. The library conducts the necessary modelling and aggregation internally to create insightful visuals.
+3. Bokeh - it is a modern web browser based interactive visualization library. It can create engaging plots and dashboards with huge streaming data. The library contains many intuitive graphs. It has close relationship with PyData tools. The library is ideal for creating customized visuals.  
+4. Plotly - python visualization library that is interactive, accessible, high-level and browser-based. Scientific graphs, 3D charts, statistical plots, and financial charts. Interaction and editing options are available. 
 
 Data visualisation plot used in the project - 
+
 Seaborn - 
+
 Seaborn aims to make visualization the central part of exploring and understanding data. It provides dataset-oriented APIs, so that we can switch between different visual representations for same variables for better understanding of dataset.
 
 Distplot - 
+
 It is used for univariant set of observations and visualizes it through a histogram - only one observation and hence we choose one particular column of the dataset. 
 
 Countplot - 
+
 seaborn.countplot() method is used to show the counts of observations in each categorical bin using bars. 
 
 Parameters - 
-x, y - This parameter take names of variables in data or vector data, optional, Inputs for plotting long-form data.
-Hue - (optional) This parameter take column name for colour encoding.
-Data - (optional) This parameter take DataFrame, array, or list of arrays, Dataset for plotting. If x and y are absent, this is interpreted as wide-form. Otherwise it is expected to be long-form.
-order, hue_order - (optional) This parameter take lists of strings. Order to plot the categorical levels in, otherwise the levels are inferred from the data objects.
-Orient - (optional)This parameter take “v” | “h”, Orientation of the plot (vertical or horizontal). This is usually inferred from the dtype of the input variables but can be used to specify when the “categorical” variable is a numeric or when plotting wide-form data.
-Color - (optional) This parameter take matplotlib color, Color for all of the elements, or seed for a gradient palette.
-Palette - (optional) This parameter take palette name, list, or dict, Colors to use for the different levels of the hue variable. Should be something that can be interpreted by color_palette(), or a dictionary mapping hue levels to matplotlib colors.
-Saturation - (optional) This parameter take float value, Proportion of the original saturation to draw colors at. Large patches often look better with slightly desaturated colors, but set this to 1 if you want the plot colors to perfectly match the input color spec.
-Dodge - (optional) This parameter take bool value, When hue nesting is used, whether elements should be shifted along the categorical axis.
-Ax - (optional) This parameter take matplotlib Axes, Axes object to draw the plot onto, otherwise uses the current Axes.
-Kwargs - This parameter take key, value mappings, Other keyword arguments are passed through to matplotlib.axes.Axes.bar().
-Returns - Returns the Axes object with the plot drawn onto it.
+1. x, y - This parameter take names of variables in data or vector data, optional, Inputs for plotting long-form data.
+2. Hue - (optional) This parameter take column name for colour encoding.
+3. Data - (optional) This parameter take DataFrame, array, or list of arrays, Dataset for plotting. If x and y are absent, this is interpreted as wide-form. Otherwise it is expected to be long-form.
+4. order, hue_order - (optional) This parameter take lists of strings. Order to plot the categorical levels in, otherwise the levels are inferred from the data objects.
+5. Orient - (optional)This parameter take “v” | “h”, Orientation of the plot (vertical or horizontal). This is usually inferred from the dtype of the input variables but can be used to specify when the “categorical” variable is a numeric or when plotting wide-form data.
+6. Color - (optional) This parameter take matplotlib color, Color for all of the elements, or seed for a gradient palette.
+7. Palette - (optional) This parameter take palette name, list, or dict, Colors to use for the different levels of the hue variable. Should be something that can be interpreted by color_palette(), or a dictionary mapping hue levels to matplotlib colors.
+8. Saturation - (optional) This parameter take float value, Proportion of the original saturation to draw colors at. Large patches often look better with slightly desaturated colors, but set this to 1 if you want the plot colors to perfectly match the input color spec.
+9. Dodge - (optional) This parameter take bool value, When hue nesting is used, whether elements should be shifted along the categorical axis.
+10. Ax - (optional) This parameter take matplotlib Axes, Axes object to draw the plot onto, otherwise uses the current Axes.
+11. Kwargs - This parameter take key, value mappings, Other keyword arguments are passed through to matplotlib.axes.Axes.bar().
+12. Returns - Returns the Axes object with the plot drawn onto it.
 
 corr() - 
+
 corr() method finds the pairwise correlation of each column in a dataframe. 
 
 There are two types of correlation - 
-Positive correlation - when the columns are directly proportional to each other 
-Negative correlation - when the columns are inversely proportional to each other. 
+1. Positive correlation - when the columns are directly proportional to each other 
+2. Negative correlation - when the columns are inversely proportional to each other. 
 
 Heatmap - 
+
 Heatmap is graphical representation of data using colors to visualize value of the matrix. It is a plot of rectangular data as color-encoded matrix. 
 
 Parameters:
-data: 2D dataset that can be coerced into an ndarray.
-vmin, vmax: Values to anchor the colormap, otherwise they are inferred from the data and other keyword arguments.
-cmap: The mapping from data values to color space.
-center: The value at which to center the colormap when plotting divergent data.
-annot: If True, write the data value in each cell.
-fmt: String formatting code to use when adding annotations.
-linewidths: Width of the lines that will divide each cell.
-linecolor: Color of the lines that will divide each cell.
-cbar: Whether to draw a colorbar.
+1. data: 2D dataset that can be coerced into an ndarray
+2. vmin, vmax: Values to anchor the colormap, otherwise they are inferred from the data and other keyword arguments.
+3. cmap: The mapping from data values to color space.
+4. center: The value at which to center the colormap when plotting divergent data.
+5. annot: If True, write the data value in each cell.
+6. fmt: String formatting code to use when adding annotations.
+7. linewidths: Width of the lines that will divide each cell.
+8. linecolor: Color of the lines that will divide each cell.
+9. cbar: Whether to draw a colorbar.
 
 
 Categorical data encoding - 
+
 Datasets contain multiple labels (in the form of words of numbers) in one or more than one columns. Training data is often labelled in words to make the data more human-readable and understandable. Categorical data encoding is coding data to convert it to a machine-readable form. It is an important data preprocessing method. 
 
 There are two types of categorical data 
-Ordinal data - categories have an inherent order
-Nominal data - no inherent order of categories
+1. Ordinal data - categories have an inherent order
+2. Nominal data - no inherent order of categories
 
 Label encoding - 
+
 Label encoding refers to converting labels into numeric form to convert it to machine-readable form. It is an important data preprocessing method for structured dataset in supervised learning. 
+
 Limitation - label encoding assigns a unique number to each class of data. However, this can lead to generation of priority issues in the training of data. A label with high value may be considered to have high priority than a label having a lower value.  
 
 replace() - 
+
 replace() in Python returns a copy of the string where all occurrences of a substring are replaced with another substring.
 
 Parameters - 
-Old – old substring you want to replace.
-New – new substring which would replace the old substring.
-Count – (Optional ) the number of times you want to replace the old substring with the new substring. 
+1. Old – old substring you want to replace.
+2. New – new substring which would replace the old substring.
+3. Count – (Optional ) the number of times you want to replace the old substring with the new substring. 
 
 Return value - It returns a copy of the string where all occurrences of a substring are replaced with another substring.
 
 Train-test split - 
+
 The entire dataset is split into training dataset and testing dataset. Usually, 80-20 or 70-30 split is done. The train-test split is used to prevent the model from overfitting and to estimate the performance of prediction-based algorithms. We need to split the dataset to evaluate how well our machine learning model performs. The train set is used to fit the model, and statistics of training set are known. Test set is for predictions. 
 
-This is done by using scikit-learn library and train_test_split() function. 
+This is done by using scikit-learn library and train_test_split() function.
+
 Parameters - 
-*arrays: inputs such as lists, arrays, data frames, or matrices
-test_size: this is a float value whose value ranges between 0.0 and 1.0. it represents the proportion of our test size. its default value is none.
-train_size: this is a float value whose value ranges between 0.0 and 1.0. it represents the proportion of our train size. its default value is none.
-random_state: this parameter is used to control the shuffling applied to the data before applying the split. it acts as a seed.
-shuffle: This parameter is used to shuffle the data before splitting. Its default value is true.
-stratify: This parameter is used to split the data in a stratified fashion.
+1. *arrays: inputs such as lists, arrays, data frames, or matrices
+2. test_size: this is a float value whose value ranges between 0.0 and 1.0. it represents the proportion of our test size. its default value is none.
+3. train_size: this is a float value whose value ranges between 0.0 and 1.0. it represents the proportion of our train size. its default value is none.
+4. random_state: this parameter is used to control the shuffling applied to the data before applying the split. it acts as a seed.
+5. shuffle: This parameter is used to shuffle the data before splitting. Its default value is true.
+6. stratify: This parameter is used to split the data in a stratified fashion.
 
 Model evaluation - 
 
